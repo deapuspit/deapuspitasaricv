@@ -80,6 +80,272 @@ Bagi saya, setiap proses adalah langkah menuju pemahaman yang lebih baik, dan sa
 
   <footer>
     <p>Copyright By Deapuspitt<!DOCTYPE html>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Kalam:wght@400;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #141E30, #243B55);
+  color: #fff;
+  line-height: 1.7;
+  scroll-behavior: smooth;
+}
+
+/* ===== NAVBAR ===== */
+header {
+  background: rgba(0, 0, 0, 0.3);
+  padding: 18px 40px;
+  display: flex;
+  justify-content: center;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  backdrop-filter: blur(5px);
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+nav ul li a {
+  color: #00e0ff;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1.05em;
+  position: relative;
+  transition: 0.3s;
+}
+
+nav ul li a:hover {
+  color: #fff;
+}
+
+nav ul li a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  left: 0;
+  bottom: -5px;
+  background: #00e0ff;
+  transition: 0.3s;
+}
+
+nav ul li a:hover::after {
+  width: 100%;
+}
+
+/* ===== MAIN CONTAINER ===== */
+main {
+  max-width: 900px;
+  margin: 100px auto;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 15px;
+  padding: 40px 20px;
+  box-shadow: 0 0 25px rgba(0, 224, 255, 0.2);
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+.profile {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.profile img {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  border: 3px solid #00e0ff;
+  box-shadow: 0 0 20px rgba(0, 224, 255, 0.5);
+  animation: zoomIn 2s ease-in-out infinite alternate;
+}
+
+.profile h1 {
+  font-size: 2em;
+  margin-top: 15px;
+  font-family: 'Kalam', cursive;
+}
+
+.profile p {
+  font-style: italic;
+  color: #00e0ff;
+}
+
+h2 {
+  text-align: center;
+  margin: 40px 0 15px;
+  font-size: 1.8em;
+  color: #00e0ff;
+  font-family: 'Kalam', cursive;
+}
+
+.overview {
+  text-align: center;
+  font-size: 1.1em;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.divider {
+  border: 0.5px solid rgba(255,255,255,0.2);
+  margin: 20px 0;
+}
+
+.info-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.08);
+  padding: 25px;
+  border-radius: 12px;
+  width: 320px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+  border-top: 2px solid #00e0ff;
+  transition: 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 6px 20px rgba(0,224,255,0.4);
+}
+
+.card h3 {
+  text-align: center;
+  color: #00e0ff;
+  margin-bottom: 15px;
+  font-size: 1.3em;
+}
+
+.card ul {
+  list-style: none;
+  padding: 0;
+}
+
+.card ul li {
+  padding: 8px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+footer {
+  text-align: center;
+  margin-top: 80px;
+  padding: 25px;
+  color: #aaa;
+  border-top: 1px solid rgba(255,255,255,0.1);
+  font-size: 0.9em;
+}
+
+footer span {
+  color: #00e0ff;
+}
+
+/* ===== ANIMATIONS ===== */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes zoomIn {
+  from { transform: scale(1); }
+  to { transform: scale(1.05); }
+}
+
+@media (max-width: 768px) {
+  main {
+    margin: 70px 20px;
+    padding: 30px 15px;
+  }
+
+  .info-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav ul {
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+}
+section {
+  max-width: 900px;
+  margin: 100px auto;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 15px;
+  padding: 50px 30px;
+  text-align: center;
+  box-shadow: 0 0 25px rgba(0, 224, 255, 0.2);
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+section .btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 25px;
+  background: #00e0ff;
+  color: #000;
+  border-radius: 8px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+section .btn:hover {
+  background: #fff;
+  color: #141E30;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+/* Navbar */
+header {
+  background: rgba(0, 0, 0, 0.3);
+  padding: 18px 40px;
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+  backdrop-filter: blur(5px);
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+/* Supaya jarak scroll pas */
+.section {
+  scroll-margin-top: 120px; /* Sesuaikan tinggi navbar */
+  padding-top: 100px;
+}
+
+/* Konten section */
+section {
+  max-width: 900px;
+  margin: 80px auto;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 15px;
+  padding: 50px 30px;
+  text-align: center;
+  box-shadow: 0 0 25px rgba(0, 224, 255, 0.2);
+  animation: fadeIn 1.5s ease-in-out;
+}
 
 const cards = document.querySelectorAll(".card, .overview, .profile");
 
@@ -100,4 +366,5 @@ window.addEventListener("scroll", () => {
     target.scrollIntoView({ behavior: 'smooth', block: 'start' });
   });
 });
+
 
